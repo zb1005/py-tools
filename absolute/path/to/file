@@ -1,0 +1,6 @@
+// 在C2单元格输入以下公式（按Ctrl+Shift+Enter作为数组公式）：
+= (B2-A2)*24 - SUM(IF(WEEKDAY(ROW(INDIRECT(INT(A2)&":"&INT(B2))),2)>5, 
+   IF(ROW(INDIRECT(INT(A2)&":"&INT(B2)))=INT(A2), (1-MOD(A2,1))*24, 
+   IF(ROW(INDIRECT(INT(A2)&":"&INT(B2)))=INT(B2), MOD(B2,1)*24, 24)), 0))
+
+// 将公式向下拖动填充其他单元格
